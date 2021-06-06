@@ -1,9 +1,8 @@
 from gen import Tree
 from math import atan, cos, sin, pi
-import demo_trees; importlib.reload(demo_trees)
+import demo_trees; reload(demo_trees)
 from demo_trees import trees
 from buchheim import buchheim as layout
-import importlib
 
 tree = trees[4][1]
 tree[0][1].children.append(Tree("a"))

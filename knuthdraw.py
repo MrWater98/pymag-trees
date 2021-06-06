@@ -1,7 +1,8 @@
 from gen import Tree
 from demo_trees import trees
 import knuth
-reload(knuth)
+import importlib
+importlib.reload(knuth)
 from knuth import layout
 
 t = layout(trees[5])

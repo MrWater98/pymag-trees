@@ -9,4 +9,4 @@ for line in fin:
         s = line.split(' ')
         lines.append((len(s), line[0:10]))
 
-print("average: ", sum(l[0] for l in lines) / float(len(lines)))
+print "average: ", sum(l[0] for l in lines) / float(len(lines))

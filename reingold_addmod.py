@@ -116,7 +116,7 @@ def p(tree):
         printrow(level)
         for t in level:
             newlevel.extend(t.children[:2])
-        print
+        print()
         if not newlevel: break
         level = newlevel
 

@@ -1,9 +1,10 @@
 from gen import Tree
 from demo_trees import trees
-import reingold_thread; reload(reingold_thread)
+import reingold_thread; importlib.reload(reingold_thread)
 from reingold_thread import reingold_tilford as rt
 #from reingold_naive import reingold_tilford as rt
 from buchheim import buchheim
+import importlib
 
 #print trees[5][0]
 t = buchheim(trees[5])

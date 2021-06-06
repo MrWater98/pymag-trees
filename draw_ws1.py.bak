@@ -1,8 +1,7 @@
 from gen import Tree
 from demo_trees import trees
 import ws1
-import importlib
-importlib.reload(ws1)
+reload(ws1)
 from ws1 import layout
 
 t = layout(trees[4])
@@ -15,7 +14,7 @@ stroke(0)
 def drawt(root, depth):
     global r
     oval(root.x * rw, depth * rh, r, r)
-    print(root.x)
+    print root.x
     for child in root.children:
         drawt(child, depth+1)
 

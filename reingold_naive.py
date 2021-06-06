@@ -36,7 +36,7 @@ def reingold_tilford(tree, depth=0):
 def fix_subtrees(left, right):
     wl = contour(left, lt)
     wr = contour(right, gt)
-    diff = max(map(lambda (x,y): x-y, zip(wl,wr))) + 1
+    diff = max([x_y[0]-x_y[1] for x_y in zip(wl,wr)]) + 1
     #stick to the integers
     diff += (right.x + diff + left.x) % 2
     addtotree(right, diff)
@@ -75,7 +75,7 @@ def p(tree):
         for t in level:
             #stdout.write("%s%s%s" % (t.x*"____", str(t)[:3], t.x))
             newlevel.extend(t.children[:2])
-        print
+        print()
         if not newlevel: break
         level = newlevel
 

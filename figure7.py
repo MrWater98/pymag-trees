@@ -1,9 +1,10 @@
 from gen import Tree
 from math import atan, cos, sin, pi
-import demo_trees; reload(demo_trees)
+import demo_trees; importlib.reload(demo_trees)
 from demo_trees import trees
-import buchheim; reload(buchheim)
+import buchheim; importlib.reload(buchheim)
 from buchheim import buchheim as layout
+import importlib
 
 t = layout(trees[8])
 

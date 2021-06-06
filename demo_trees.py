@@ -172,5 +172,19 @@ Tree("t",
                 Tree("98"), Tree("99")),
               Tree("rrllr")),
             Tree("rrlr"))))))),
+  #11 simple n-ary
+  Tree("root",
+    Tree("m",
+         Tree("r1",
+              Tree("r1",
+                   Tree("r1"),
+                   Tree("l1")),
+              Tree("l1",
+                   Tree("r1"),
+                   Tree("l1"))),
+         Tree("l1",
+              Tree("r1"),
+              Tree("l1")))),
 
 ]
+

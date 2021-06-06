@@ -1,7 +1,8 @@
 from gen import Tree
 from demo_trees import trees
 import ws2
-reload(ws2)
+import importlib
+importlib.reload(ws2)
 from ws2 import layout
 
 t = layout(trees[5])

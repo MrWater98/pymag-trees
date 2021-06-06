@@ -1,22 +1,18 @@
 from gen import Tree
 from math import atan, cos, sin, pi
-import demo_trees; importlib.reload(demo_trees)
+import demo_trees; reload(demo_trees)
 from demo_trees import trees
+import buchheim; reload(buchheim)
 from buchheim import buchheim as layout
-import importlib
 
-tree = trees[4][1]
-tree[0][1].children.append(Tree("a"))
-tree[0][1].children.append(Tree("b"))
-t = layout(trees[4][1])
+t = layout(trees[8])
 
 r = 30
 rh = r*1.5
-rw = r*2
+rw = r*1.5
 stroke(0)
 
 def drawt(root, depth):
-    global r
     oval(root.x * rw, depth * rh, r, r)
     for child in root.children:
         drawt(child, depth+1)
@@ -29,7 +25,9 @@ def drawconn(root, depth):
 
 def dottedline(x1, y1, x2, y2):
     segment = 5
-    if x2 - x1 > 0:
+    if x2 == x1:
+        theta = pi/2
+    elif x2 - x1 > 0:
         theta = atan(float(y2-y1)/float(x2-x1))
     else:
         theta = pi + atan(float(y2-y1)/float(x2-x1))
